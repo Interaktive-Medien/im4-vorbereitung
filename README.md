@@ -1,49 +1,48 @@
 #  Das 9️⃣ Schritte Theme
 `Frühjahrssemester 2022 - IM4 - Vorbereitung Wordpress`
 
----
-
-Als Vorbereitung auf den Wordpress-Kurs in IM4 wird mit diesem Tutorial ein erstes Mal ein sehr einfaches eigenes Wordpress-Theme erstellt. 
+Als Vorbereitung auf den Wordpress-Kurs in IM4 wird mit diesem Tutorial ein erstes Mal ein sehr einfaches, eigenes Wordpress-Theme erstellt. 
 Für dieses Tutorial wird vorausgesetzt, dass du schon einmal mit dem Backend Wordpress gearbeitet hast. 
 
-Damit ihr wirklich von diesem Tutorial profitiert, solltet ihr euch mindestens zwei Stunden Zeit dafür nehmen. 
-Ihr könnt das Tutorial hier in Textform durcharbeiten oder als Video, welcher unter diesem Link zu finden ist.
+Damit du wirklich von diesem Tutorial profitierst, solltest du dir mindestens zwei Stunden Zeit dafür nehmen und aktiv mitprogrammieren. 
+Du kannst das Tutorial hier in Textform durcharbeiten oder als Video, welcher hier zu finden ist. [todo: add video]
 
 Viel Spass 🎉
 
----
-
 ## 🍽️ 01 - Das Mise en Place
-Wir beginnen wie beim Kochen und machen ein Mise-en-place. Sprich: Wir bauen uns unsere Entwicklungsumgebung auf. Die Zutaten, die wir brauchen, sind folgende:
+Wir beginnen wie beim Kochen und machen ein Mise-en-place. 
+Sprich: Wir bauen uns unsere Entwicklungsumgebung auf. 
+Die Zutaten, die wir brauchen, sind folgende:
 
-| Was                          | Link                                          |
-|------------------------------|-----------------------------------------------|
-| Den Code-Editor Atom         | https://atom.io                               |
-| Webserver der FHGR           | https://my.fh-htwchur.ch/index.php?id=ftpstud |
-| WordPress-Installationsdatei | https://de.wordpress.org/download/            |
+| Was                          | Link                                                              |
+|------------------------------|-------------------------------------------------------------------|
+| Den Code-Editor Atom         | [atom.io](https://atom.io)                                        |
+| Webserver der FHGR           | [my.fh-htwchur.ch](https://my.fh-htwchur.ch/index.php?id=ftpstud) |
+| WordPress-Installationsdatei | [de.wordpress.org](https://de.wordpress.org/download/)            |
 
----
 
 ## 💻 02 - Die Installation
-Setze zuerst eine neue Umgebung auf dem Schulserver auf. Wichtig: **Eine Datenbank wird benötigt**. 
-Lade dann alle Dateien der entzippten Wordpress-Installationsdatei in's Verzeichnis `web` des Servers. Wichtig hier: **Lade nicht den Ordner `wordpress` hoch, sondern alle sich darin befindenden Dateien. 
+Setze zuerst eine neue Umgebung auf dem Schulserver auf. Wichtig: Es wird eine Datenbank benötigt. 
+Lade dann alle Dateien der entzippten Wordpress-Installationsdatei in's Verzeichnis `web` des Servers. 
+Wichtig hier: Lade nicht den Ordner `wordpress` hoch, sondern alle sich darin befindenden Dateien. 
 
-Sobald alles hochgeladen ist, kannst du die Webseite öffnen und dem Installationsassistenten folgen. 
-
----
+Sobald alles hochgeladen ist, kannst du die Webseite öffnen und dem Installationsassistenten folgen.
 
 ## 🧥 03 - Das Theme
-Du hast im Moment das Standarttheme von WordPress auf deiner Webseite installiert. Genau das wollen wir jetzt ändern, denn wir wollen im Anschluss ein eigenes, 100% individualisierbares Theme erstellen.
-Nimm deshalb folgende Schritte vor: 
-- Erstelle lokal auf deinem Gerät einen Ordner `neunschrittetheme` 
-- Erstelle auch auf dem Server unter `web/wp-content/themes/` eine Ordner mit dem Namen `neunschrittetheme`
-- Öffne den lokal gespeicherten Ordner im Atom und erstelle zwei Dateien: `index.php` und `style.css`
+Du hast im Moment das Standarttheme von WordPress auf deiner Webseite installiert. 
+Genau das wollen wir jetzt ändern, denn wir wollen im Anschluss ein eigenes, 100% individualisierbares Theme erstellen.
+
+Nimm deshalb folgende Schritte vor:
+
+1. Erstelle lokal auf deinem Gerät einen Ordner `neunschrittetheme` 
+2. Erstelle auch auf dem Server unter `web/wp-content/themes/` eine Ordner mit dem Namen `neunschrittetheme`
+3. Öffne den lokal gespeicherten Ordner im Atom und erstelle zwei Dateien: `index.php` und `style.css`
 
 Um ein funktionierendes Wordpress-Theme zu erstellen, werden mindestens diese zwei Dateien vorausgesetzt.  
-
 Kopiere in die Datei `index.php` folgenden Code rein. Der gibt die HTML-Grundstrukturen des Themes vor.
+
 <details>
-<summary>HTML Kopiervorlage</summary>
+<summary><strong>⚠️🗄️ HTML Kopiervorlage</strong></summary>
 
 ```html
 <!DOCTYPE html>
@@ -86,19 +85,17 @@ Description: FS22 Vorbereitung Wordpress Kurs Mai 2022
 Version: 1.0
 */
 ```
-Alle Dinge die nach mir benannt sind, kannst und sollst du natürlich umbenennen :) Wenn du das gemacht hast, hast du eigentlisch schon ein erstes, eigenes Wordpress-Theme erstellt. 
-
----
+Alle Dinge die nach mir benannt sind, kannst und sollst du natürlich umbenennen 🙂
+Wenn du das gemacht hast, hast du eigentlisch schon ein erstes, eigenes Wordpress-Theme erstellt.
 
 ## 👓 04 - Der erste Blick
 Auf deiner WordPress-Seite hat sich nun natürlich noch nichts geändert. 
-Dafür musst du zuerst dein eigenes, soeben erstelltes, Theme hochladen und aktivieren. 
-
----
+Dafür musst du zuerst dein eigenes, soeben erstelltes, Theme hochladen und aktivieren.
 
 ### ⬆️ 04.1 - Hochladen
-Für's wird das Package Remote FTP genutzt. Klicke im Atom folgendes: `packages/Remote FTP/Create FTP config file`. 
-In diesem File berarbeitest du nun folgende vier Zeilen: 
+Für's wird das Package Remote FTP genutzt. 
+Klicke im Atom folgendes: `packages/Remote FTP/Create FTP config file`. 
+In diesem File berarbeitest du nun folgende vier Zeilen:
 ```json
 {
   "host": "web1.fh-htwchur.ch",
@@ -111,35 +108,36 @@ Wähle anschliessend `packages/Remote FTP/toggle`, klicke dann auf den neuen Rem
 Wenn das klappt, kannst du anschliessend auf `Project` klicken, alle Dateien anwählen und mit Rechtsklick `Sync local -> remote` auf den Server laden.
 
 ### ▶️ 04.2 - Aktivieren
-Wenn das hochladen klappt, muss das Theme aktiviert werden. Das machst du im Backend unter dem Punkt Appearance/Themes. 
-Wenn du dort drauf gehst sollte nun dein Theme erscheinen. 
+Wenn das hochladen klappt, muss das Theme aktiviert werden. 
+Das machst du im Backend unter dem Punkt `Appearance/Themes`. 
+Wenn du dort drauf gehst sollte nun auch dein eigenes Theme erscheinen. 
 Unten sollte sich ein Button finden, mit dem du das Theme aktivieren kannst. 
 Wenn du die Seite auf dem Webserver neu lädst (ev. mit SHIFT und dem Refresh-Pfeil) erscheint nun die Webseite mit deinem eigenen Theme.
 
----
-
 ## 👯‍♂️ 05 - Die Dynamik
-Bis jetzt kann unser Theme nichts. 
-Also wirklich nichts 🙂 Aber das ändert sich bald, denn wir fügen nun einige Dinge ein, die das Theme dynamischer machen und mit dem Backend zusammenspielen lassen.
+Bis jetzt kann unser Theme nichts. Also wirklich nichts 🙂 
+Aber das ändert sich bald, denn wir fügen nun einige Dinge ein, die das Theme dynamischer machen und mit dem Backend zusammenspielen lassen.
 
 ### 🧑‍🦲 05.1 - Seitentitel und Slogan
 Wir wollen, dass im `h1` im Header der im Backend definierte Seitentitel für unsere Webseite ausgegeben wird. 
 Dieser soll sich, wenn wir im Backend den Namen ändern, auch anpassen. 
-Dafür löschst du den Inhalt zwischen den `h1` raus und ersetzt ihn durch diesen:
-```injectablephp
+Dafür löschst du den Inhalt zwischen den `h1`-Tags raus und ersetzt ihn durch diesen:
+```php
 <?php bloginfo('name') ;?>
 ```
 Füge dasselbe Snippet auch im Head zwischen die `title`-Tags ein. 
-Zwischen den p-Tag im Header wo der Slogan hin soll fügst du folgendes Snippet:
-```injectablephp
+Zwischen den p-Tag im Header, wo der Slogan hin soll, fügst du folgendes Snippet:
+```php
 <?php bloginfo('description') ;?>
 ```
-Wenn du die `index.php`-Datei abgespeichert hast, kannst du im Backend unter Einstellungen nun den Titel und den Untertitel ändern. 
+Wenn du die Datei `index.php` abgespeichert hast, kannst du im Backend unter Einstellungen nun den Titel und den Untertitel ändern. 
 Dieser wird sich auf der Webseite nun automatisch anpassen.
+
 ### 🖌️ 05.2 - Stylesheet
-Die `style.css`-Datei hast du ja ganz zu Beginn schon erstellt. Doch darin sind bisher nur die Angaben zum Theme gemacht worden, 
-die Webseite ist noh ungestylt. Mit folgendem Tag im head kannst du das Stylesheet mit `index.php` verknüpfen.
-```html
+Die Datei `style.css` hast du ja ganz zu Beginn schon erstellt. 
+Doch darin sind bisher nur die Angaben zum Theme gemacht worden, 
+die Webseite ist noch ungestylt. Mit folgendem Tag im `head` von `index.php` kannst du das Stylesheet mit deinem Theme verknüpfen.
+```html+php
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url') ;?>">
 ```
 Füge in die Datei `style.css` nun folgende Zeilen ein. 
