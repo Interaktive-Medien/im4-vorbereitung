@@ -42,7 +42,7 @@ Um ein funktionierendes Wordpress-Theme zu erstellen, werden mindestens diese zw
 Kopiere in die Datei `index.php` folgenden Code rein. Der gibt die HTML-Grundstrukturen des Themes vor.
 
 <details>
-<summary><strong>⚠️🗄️ HTML Kopiervorlage</strong></summary>
+<summary><strong>⚠️🗄️ HTML Kopiervorlage</strong> ------- <i>klicken um zu öffnen</i></summary>
 
 ```html
 <!DOCTYPE html>
@@ -137,14 +137,15 @@ Dieser wird sich auf der Webseite nun automatisch anpassen.
 Die Datei `style.css` hast du ja ganz zu Beginn schon erstellt. 
 Doch darin sind bisher nur die Angaben zum Theme gemacht worden, 
 die Webseite ist noch ungestylt. Mit folgendem Tag im `head` von `index.php` kannst du das Stylesheet mit deinem Theme verknüpfen.
-```html+php
+```php
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url') ;?>">
 ```
 Füge in die Datei `style.css` nun folgende Zeilen ein. 
-Wenn du dann dein eigenes Theme schreibst musst du diese Datei natürlich selbst schreiben, aber damit du dich hier nur auf die Funtkionalitäten von WordPress konzentrieren kannst, 
-habe ich das CSS schon vorgeschrieben.
+Wenn du dann dein eigenes Theme schreibst musst du diese Datei natürlich selbst schreiben, 
+aber damit du dich hier nur auf die Funtkionalitäten von WordPress konzentrieren kannst, 
+wird dir hier dass CSS zur Verfügung gestellt.
 <details>
-<summary>Kopiervorlage CS</summary>
+<summary><strong>⚠️🗄️ Kopiervorlage CSS</strong> ------- <i>klicken um zu öffnen</i></summary>
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -260,37 +261,34 @@ footer {
 Und voila, jetzt sieht deine Webseite auch schon schön aus 🙂
 
 ### 🔗 05.3 - Logo / Titel verlinken
-Damit man wenn man auf Unterseiten ist mit einem Klick auf das Logo (bei uns jetzt einfach der Seitentitel) immer zurück auf die Startseite kommt, 
-müssen wir diesen Titel dynamisch mit der Startseite verlinken. 
-Das machen wir, indem wir in den `h1`-Tag folgendes einfügen:
-```html
+Damit man, wenn man auf Unterseiten ist, mit einem Klick auf das Logo (bei uns jetzt einfach der Seitentitel) immer zurück auf die Startseite kommt, 
+müssen wir diesen dynamisch mit der Startseite verlinken. 
+Das machen wir, indem wir anstatt nur dem `h1`-Tag folgendes einfügen:
+```php
 <a href="<?php echo home_url('/') ;?>">
-    <?php bloginfo('name') ;?>
+    <h1><?php bloginfo('name') ;?></h1>
 </a>
 ```
-Dein Logo (oder in diesem Fall Titel) verweis jetzt immer auf die Startseite, 
-auch wenn du diese im Verlauf der Erstellung deines Themes änderst.
+Dein Seitentitel verweis jetzt immer auf die Startseite.
 
 ### 📢 05.4 - Unterstützdende Tags
 Die nachfolgenden Angaben sind extrem wichtig! 
-Sie verändern auf den ersten Blick nicht viel, sind aber für die Funktionalität essentiell! 
-Das einzige was du auf den ersten Blick als Veränderung erkennst, ist die Bearbeitungsleiste die dir dann angezeigt wird.
+Sie verändern auf den ersten Blick nicht viel, sind aber für die Funktionalität von Wordpress essentiell! 
+Das Einzige, was du nach diesen Schirtten auf den ersten Blick als Veränderung erkennen wirst, ist die Bearbeitungsleiste, die dir angezeigt wird.
 
 Ändere den `body`-Tag so ab:
-```html
+```php
 <body <?php body_class() ;?>>
 ```
 Füge vor den schliessenden `head`-Tag folgendes ein:
-```injectablephp
+```php
 <?php wp_head() ;?>
 ```
 Füge vor dem schliessenden `body`-Tag folgendes ein:
-```injectablephp
+```php
 <?php wp_footer() ;?>
 ```
 Et voila, nun hast du dein Theme zum ersten Mal etwas dynamischer gemacht 🙂
-
----
 
 ## ✂️ 06 - Das Zerstückeln
 Eine Webseite ist ja meistens so aufgebaut, dass sie auf der ganzen Seite immer denselben Header und denselben Footer hat. 
