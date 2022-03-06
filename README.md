@@ -358,10 +358,10 @@ Nach einem Refresh sollte dir jetzt die Startseite als Navigationspunkt angezeig
 ## 🫀 08 - Das Query aka. das Herzstück aka. der Loop
 Bevor wir mit dem achten Schritt beginnen, musst du Testinhalte erstellen.
 
-- `page` -> Impressum
-- `page` -> About Us
-- `post` -> Hallo Welt! (sollte schon bestehen)
-- `post` -> Hallo another Welt!
+- `page` ➡️ Impressum
+- `page` ➡️ About Us
+- `post` ➡️ Hallo Welt! (sollte schon bestehen)
+- `post` ➡️ Hallo another Welt!
 
 Fülle diese Posts mit Dummycontent und füge die Seiten `Impressum` und `About Us` in die Navigation ein.
 Wenn jetzt auf einen dieser Menupunkte geklickt wird, wechselt sich zwar die URL,
@@ -424,19 +424,19 @@ Das können wir uns jetzt zu Nutzen machen! 🙂
 
 Wir nehmen nu folgende Änderungen vor: 
 
-1. `front-page.php` -> Zwischen den `p`-Tags geben wir anstatt dem content neu folgendes aus:
+1. `front-page.php` ➡️ Zwischen den `p`-Tags geben wir anstatt dem content neu folgendes aus:
 ```php
 <?php the_excerpt() ?>
 ```
-2.`front-page.php` -> Nach dem `p`-Tag geben wir noch einen Link aus:
+2. `front-page.php` ➡️️ Nach dem `p`-Tag geben wir noch einen Link aus:
 ```php
   <a href="<?php the_permalink() ?>">mehr lesen</a>
 ```
-- `single.php` -> Wir geben bei den Beiträgen zusätzlich zum Inhalt auch Autor und Datum aus:
+3. `single.php` ➡️ Wir geben bei den Beiträgen zusätzlich zum Inhalt auch Autor und Datum aus:
 ```php
  <h4><?php the_author() ;?>,<?php the_time('d.m.Y') ;?></h4>
 ```
-- `Backend Menupunkt Benutzter` -> Damit der Autorenname korrekt angezeigt wird, kann man beim Benutzer das Feld **öffentlicher Name** angepasst werden.
+4. `Backend Menupunkt Benutzter` ➡️ Damit der Autorenname korrekt angezeigt wird, kann man beim Benutzer das Feld **öffentlicher Name** angepasst werden.
 
 Zum Abschluss können jetzt die `mark`-Tags wieder entfernt werden🙃
 
