@@ -42,7 +42,7 @@ Um ein funktionierendes Wordpress-Theme zu erstellen, werden mindestens diese zw
 Kopiere in die Datei `index.php` folgenden Code rein. Der gibt die HTML-Grundstrukturen des Themes vor.
 
 <details>
-<summary><strong>⚠️🗄️ HTML Kopiervorlage</strong> ------- <i>klicken um zu öffnen</i></summary>
+<summary>👇👇👇👇👇👇 - <strong>HTML Kopiervorlage</strong> - 👇👇👇👇👇👇</summary>
 
 ```html
 <!DOCTYPE html>
@@ -145,7 +145,7 @@ Wenn du dann dein eigenes Theme schreibst musst du diese Datei natürlich selbst
 aber damit du dich hier nur auf die Funtkionalitäten von WordPress konzentrieren kannst, 
 wird dir hier dass CSS zur Verfügung gestellt.
 <details>
-<summary><strong>⚠️🗄️ Kopiervorlage CSS</strong> ------- <i>klicken um zu öffnen</i></summary>
+<summary>👇👇👇👇👇👇 - <strong>Kopiervorlage CSS</strong> - 👇👇👇👇👇👇</summary>
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -298,31 +298,32 @@ Erstelle eine Datei namens `header.php` und eine namens `footer.php`.
 Nun schneidest du alle Inhalte aus `index.php` bis und mit öffnendem `main`-Tag aus und fügst alles in die Datei `header.php` ein. 
 Danach schneidest du alles ab dem schliessenden `main`-Tag aus und fügst es in die Datei `footer.php` ein.
 
-Jetzt speicherst du alle Dateien mal ab. In einem Nächsten Schritt musst du die Teile die du entfernt hast wieder einfügen. 
-Das geschieht mit den Template-Iclude-Tags.
+Dann speicherst du alle Dateien mal ab. 
+In einem Nächsten Schritt musst du die Teile, die du entfernt hast, wieder einfügen. 
+Das geschieht mit sogenannten [Template-Include-Tags](https://codex.wordpress.org/Include_Tags).
 
 Zuoberst in der Datei `index.php` fügts du folgendes ein:
-```injectablephp
+```php
 <?php get_header(); ?>
 ```
 Und zuuntest das:
-```injectablephp
+```php
 <?php get_footer(); ?>
 ```
-Wenn du die Seite aktualisierst, sollte sich nun nichts verändert haben. Das ist aber gut so 🙂
-
----
+Wenn du die Seite aktualisierst, sollte sich nun nichts verändert haben. 
+Das ist aber gut so 🙂
 
 ## 🧭 07 - Die Navigation
-Nun fügen wir eine Navigation ein, die nachher im frei Backend anpassbar ist. Dafür müssen zwei Dinge getan werden:
+Nun fügen wir eine Navigation ein, die nachher im Backend frei anpassbar ist. 
+Dafür müssen zwei Dinge getan werden:
 
 1. Die Navigation muss im Backend registriert werden.
 2. Der Navigation muss im Frontend ein Platz zugewiesen werden.
 
-Doch beginnen wir zuoberst. Zu Beginn muss eine neue Datei erstellt werden, `functions.php`. 
+Doch beginnen wir zuoberst. Zu Beginn muss eine neue Datei erstellt werden die `functions.php` heisst. 
 Diese würde, wenn das Theme anschliessend an diese neun Schritte weiter optimiert würde, sehr häufig gebraucht werden. 
 In diese Datei fügst du nun dieses Schnipsel ein:
-```injectablephp
+```php
 <?php
     add_action('after_setup_theme', 'navigation_registrieren');
     function navigation_registrieren(){
@@ -330,7 +331,7 @@ In diese Datei fügst du nun dieses Schnipsel ein:
     };
 ?>
 ```
-Einige Begriffe aus der Funktion die du nun eingefügst hab, erkläre ich kurz:
+Einige Begriffe aus der Funktion, die du nun eingefügst hast, werden hier kurz erklärt:
 
 | Befehl              | Definition                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -340,20 +341,19 @@ Einige Begriffe aus der Funktion die du nun eingefügst hab, erkläre ich kurz:
 | `hauptnavigation`   | Das ist der Name, der die Navigation erhält. Wenn du diese Navigation nachher platzieren willst, brauchst du diesen Namen. Du kannst diesen beliebig wählen. |
 | `Navigation oben`   | So wird deine Navigation im Backend benannt.                                                                                                                 |
 
-Wenn du nun alles speicherst und das Backend neu lädst sollte unter dem Punkt Design der Punkt „Menus“ erscheinen. 
-Dort kannst du deine Navigation nun mal erfassen. 
-Füge dazu einfach mal die Startseite als Beispielseite ein.
+Wenn du nun alles speicherst und das Backend neu lädst, sollte unter dem Punkt Design der Punkt „Menus“ erscheinen. 
+Dort kannst du deine Navigation nun erfassen. 
+Füge dazu einfach mal die Startseite ins Menu ein.
 
 Wenn du das Frontend nachher aktualisierst, wirst du noch nichts sehen. 
 Das, weil wir den Ort für diese Navigation noch nicht bestummen haben. 
-Das machen wir jetzt, und zwar in dem wir das folgende Codeschnipsel zwischen die `nav`-Tags einfügen.
-```injectablephp
+Das machen wir jetzt, und zwar in dem wir das folgende Snippet in `index.php` zwischen die `nav`-Tags einfügen.
+```php
 <?php wp_nav_menu(array('theme_location' => 'hauptnavigation')) ;?>
 ```
-Du siehst, dass wir nun den Namen den wir der Navigation gegeben haben, hier auch angeben mussten. So wird der Code von vorher zugewiesen. 
+Du siehst, dass wir nun den Namen den wir der Navigation gegeben haben, hier auch angeben mussten. 
+So wird die registrierte Navigation diesem Ort zugewiesen. 
 Nach einem Refresh sollte dir jetzt die Startseite als Navigationspunkt angezeigt werden.
-
----
 
 ## 🫀 08 - Das Query aka. das Herzstück aka. der Loop
 Bevor wir mit dem achten Schritt beginnen, musst du Testinhalte erstellen.
@@ -365,10 +365,10 @@ Bevor wir mit dem achten Schritt beginnen, musst du Testinhalte erstellen.
 
 Fülle diese Posts mit Dummycontent und füge die Seiten `Impressum` und `About Us` in die Navigation ein.
 Wenn jetzt auf einen dieser Menupunkte geklickt wird, wechselt sich zwar die URL,
-aber der definierte Inhalt wird nicht angezeigt. Das ändern wir jetzt. 
+aber der von dir eingefüllte Inhalt wird nicht angezeigt. Das ändern wir jetzt. 
 
 Füge in der Datei `index.php` zwischen die `article`-Tags folgendes Snippet ein:
-```injectablephp
+```php
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h2><?php the_title() ?></h2>
     <p><?php the_content() ?></p>
@@ -376,31 +376,33 @@ Füge in der Datei `index.php` zwischen die `article`-Tags folgendes Snippet ein
     <p>Es können keine Posts geladen werden.</p>
 <?php endif; ?>
 ```
-Diese Codezeilen, bzw. die if-while-else-Anweisung, ist der sogenannte Loop, der macht, dass auf der Seite die richtigen Inhalte angezeit werden.
+Diese Codezeilen sind der sogenannte Loop. 
+Dieser macht, dass auf der Seite die richtigen Inhalte angezeit werden.
 
-Die zwei Tags `the_title()` und `the_content()` sind sogenannte Template-Tags. 
-Solche Template-Tags gibt es unendlich viele, so können beispielsweise auch der Autor, das Veröffentlichungsdatum des Beitrags, etc. ausgegeben werden.
+Die zwei Tags `the_title()` und `the_content()` sind sogenannte [Template-Tags](https://codex.wordpress.org/Template_Tags). 
+Solche Template-Tags gibt es sehr viele. 
+So können beispielsweise auch der/die Autor:in, das Veröffentlichungsdatum des Beitrags, etc. ausgegeben werden.
 
-Wenn jetzt auf die verschiedenen Seiten (z.B. Impressum) geschaut wird, wird dort der definierte Inhalt angezeigt. 
+Wenn jetzt auf die verschiedenen Seiten (z.B. Impressum) geschaut werden, wird dort der definierte Inhalt angezeigt. 
 Auf der Startseite wird der gesamte Inhalt beider Blogbeiträge angezeigt. Das ist eher unschön. 
-Für das braucht es den letzten Schritt.
-
----
+Um diese Darstellung etwas zu optimieren brauchen wir den letzten Schritt.
 
 ## 📑 09 - Das Splitting
+Jetzt kommt der finale Schritt. 
+Wir erstellen für die verschiedenen Beitragstypen eigene Ansichten. 
+Das machen wir, damit z.B. Blogposts anders aussehen als Seiten. 
 
-Jetzt kommt noch der finale Schritt, der fehlt, um das Theme abzuschliessen. 
-Wir erstellen nämlich für die verschiedenen Beitragstypen eigene Ansichten. 
-Und zwar für:
 
-| Dateiname         | Beschreibung                                                                                 |
-|-------------------|----------------------------------------------------------------------------------------------|
-| `page.php`        | Seiten/Pages. Meist für statische Seiten wie z.B. Impressum, Kontakt oder Portfolio genutzt. |
-| `single.php`      | Beiträge/Posts. Meist für dynamische Inhalte gebraucht.                                      |
-| `front-page.php`  | Startseite                                                                                   |
+Wir erstellen nun folgende Templates:
+
+| Dateiname         | Zweck des Templates                                                                              |
+|-------------------|--------------------------------------------------------------------------------------------------|
+| `page.php`        | Für Seiten/Pages. Meist für statische Seiten wie z.B. Impressum, Kontakt oder Portfolio genutzt. |
+| `single.php`      | Für Beiträge/Posts. Meist für dynamische Inhalte gebraucht.                                      |
+| `front-page.php`  | Für Startseite                                                                                   |
 
 Es gäbe noch weitere dieser Seitentypen (z.b. archive.php, date.php, etc.). 
-Eine Übersicht und deren Hierarchien (also wann welcher Seitentyp verwendet wird), findest du unter dieser Webseite.
+Eine Übersicht über alle Seitentypen und wie man für diese Templates erstellt findest du unter [dieser Webseite](https://wphierarchy.com/).
 
 Erstelle nun zuerst mal die drei oben aufgelisteten Dateien.
 
@@ -414,33 +416,32 @@ um welche Datei es sich handelt. So etwa:
 ```html
 <mark>front-page.php</mark>
 ```
-Für page.php und single.php schreibst du natürlich die entsprechenden Namen zwischen die Mark-Klammern.
+Für `page.php` und `single.php` schreibst du natürlich die entsprechenden Namen zwischen die `mark`-Klammern.
 
-Wenn du anschliessend alles Abspeicherst und dich durch die Seiten und Beiträge klickst, 
+Wenn du anschliessend alles abspeicherst und dich durch die Seiten und Beiträge klickst, 
 siehst du dass für unteschiedliche Sachen unterschiedliche Templates verwedent werden. 
 Das können wir uns jetzt zu Nutzen machen! 🙂
 
 Wir nehmen nu folgende Änderungen vor: 
 
-- `front-page.php` -> Zwischen den `p`-Tags geben wir anstatt dem content neu folgendes aus
-```html
+1. `front-page.php` -> Zwischen den `p`-Tags geben wir anstatt dem content neu folgendes aus:
+```php
 <?php the_excerpt() ?>
 ```
-- `front-page.php` -> Nach dem `p`-Tag geben wir noch einen Link aus
-```html
+2.`front-page.php` -> Nach dem `p`-Tag geben wir noch einen Link aus:
+```php
   <a href="<?php the_permalink() ?>">mehr lesen</a>
 ```
-- `single.php` -> Wir geben bei den Beiträgen zusätzlich zum Inhalt auch Autor und Datum aus
-```html
+- `single.php` -> Wir geben bei den Beiträgen zusätzlich zum Inhalt auch Autor und Datum aus:
+```php
  <h4><?php the_author() ;?>,<?php the_time('d.m.Y') ;?></h4>
 ```
-- `Backend Benutzter`: Damit der Autorenname korrekt angezeigt wird, kann man beim Benutzer das Feld **öffentlicher Name** angepasst werden.
+- `Backend Menupunkt Benutzter` -> Damit der Autorenname korrekt angezeigt wird, kann man beim Benutzer das Feld **öffentlicher Name** angepasst werden.
 
-Zum Abschluss können jetzt die `mark`-Tags wieder entfernt werden :)
+Zum Abschluss können jetzt die `mark`-Tags wieder entfernt werden🙃
 
-# Das war's 🥳
+# Und das war's 🥳
 Du hast dein erstes eigenes Theme geschrieben.
-Im Verlaufe der IM4-Woche zu Wordpress wird dein Wissen in diesem Bereich noch erweitert. 
+Hoffentlich hattest du Spass und bist ready, in der Blockwoche noch viel mehr über Wordpress und eigene Themes zu lernen. 
 
 Bis dahin eine gute Zeit 🥂
-
