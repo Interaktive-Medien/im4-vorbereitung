@@ -5,7 +5,9 @@ Als Vorbereitung auf den Wordpress-Kurs in IM4 wird mit diesem Tutorial ein erst
 Für dieses Tutorial wird vorausgesetzt, dass du schon einmal mit dem Backend Wordpress gearbeitet hast. 
 
 Damit du wirklich von diesem Tutorial profitierst, solltest du dir mindestens zwei Stunden Zeit dafür nehmen und aktiv mitprogrammieren. 
-Du kannst das Tutorial hier in Textform durcharbeiten oder als Video, welcher hier zu finden ist. [todo: add video]
+Du kannst das Tutorial hier in Textform durcharbeiten oder als Video, welcher hier zu finden ist.
+
+[![Video](https://i3.ytimg.com/vi/z1XVoRSLTjw/maxresdefault.jpg)](https://www.youtube.com/watch?v=z1XVoRSLTjw)
 
 Viel Spass 🎉
 
