@@ -300,7 +300,7 @@ Danach schneidest du alles ab dem schliessenden `main`-Tag aus und fügst es in 
 
 Dann speicherst du alle Dateien mal ab. 
 In einem Nächsten Schritt musst du die Teile, die du entfernt hast, wieder einfügen. 
-Das geschieht mit sogenannten [^1].
+Das geschieht mit sogenannten Template Include Tags [^1].
 
 Zuoberst in der Datei `index.php` fügts du folgendes ein:
 ```php
