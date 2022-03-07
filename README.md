@@ -5,7 +5,7 @@
 Damit du wirklich von diesem Tutorial profitierst, solltest du dir mindestens zwei Stunden Zeit dafür nehmen und aktiv mitprogrammieren. 
 Du kannst das Tutorial unten in Textform durcharbeiten oder als Video, welcher hier zu finden ist.
 
-[![Video](https://i3.ytimg.com/vi/z1XVoRSLTjw/maxresdefault.jpg)](https://www.youtube.com/watch?v=z1XVoRSLTjw)
+[![Video](https://i3.ytimg.com/vi/RokIlXTFGiU/maxresdefault.jpg)](https://www.youtube.com/watch?v=RokIlXTFGiU)
 
 Viel Spass 🎉
 
