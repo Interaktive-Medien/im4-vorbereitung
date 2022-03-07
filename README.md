@@ -1,11 +1,9 @@
-#  Das 9️⃣ Schritte Theme
-`Frühjahrssemester 2022 - IM4 - Vorbereitung Wordpress`
-
-Als Vorbereitung auf den Wordpress-Kurs in IM4 wird mit diesem Tutorial ein erstes Mal ein sehr einfaches, eigenes Wordpress-Theme erstellt. 
-Für dieses Tutorial wird vorausgesetzt, dass du schon einmal mit dem Backend Wordpress gearbeitet hast. 
+#  Das `9` Schritte Theme
+> **Um was geht's**: Als Vorbereitung auf den Wordpress-Kurs in IM4 wird mit diesem Tutorial ein erstes Mal ein sehr einfaches, eigenes Wordpress-Theme erstellt.
+> Für dieses Tutorial wird vorausgesetzt, dass du schon einmal mit dem Backend Wordpress gearbeitet hast.
 
 Damit du wirklich von diesem Tutorial profitierst, solltest du dir mindestens zwei Stunden Zeit dafür nehmen und aktiv mitprogrammieren. 
-Du kannst das Tutorial hier in Textform durcharbeiten oder als Video, welcher hier zu finden ist.
+Du kannst das Tutorial unten in Textform durcharbeiten oder als Video, welcher hier zu finden ist.
 
 [![Video](https://i3.ytimg.com/vi/z1XVoRSLTjw/maxresdefault.jpg)](https://www.youtube.com/watch?v=z1XVoRSLTjw)
 
@@ -44,7 +42,7 @@ Um ein funktionierendes Wordpress-Theme zu erstellen, werden mindestens diese zw
 Kopiere in die Datei `index.php` folgenden Code rein. Der gibt die HTML-Grundstrukturen des Themes vor.
 
 <details>
-<summary>👇👇👇👇👇👇 - <strong>HTML Kopiervorlage</strong> - 👇👇👇👇👇👇</summary>
+<summary><strong>👉 HTML Kopiervorlage 👈</strong></summary>
 
 ```html
 <!DOCTYPE html>
@@ -147,7 +145,7 @@ Wenn du dann dein eigenes Theme schreibst musst du diese Datei natürlich selbst
 aber damit du dich hier nur auf die Funtkionalitäten von WordPress konzentrieren kannst, 
 wird dir hier dass CSS zur Verfügung gestellt.
 <details>
-<summary>👇👇👇👇👇👇 - <strong>Kopiervorlage CSS</strong> - 👇👇👇👇👇👇</summary>
+<summary><strong>👉 Kopiervorlage CSS 👈</strong></summary>
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -302,7 +300,7 @@ Danach schneidest du alles ab dem schliessenden `main`-Tag aus und fügst es in 
 
 Dann speicherst du alle Dateien mal ab. 
 In einem Nächsten Schritt musst du die Teile, die du entfernt hast, wieder einfügen. 
-Das geschieht mit sogenannten [Template-Include-Tags](https://codex.wordpress.org/Include_Tags).
+Das geschieht mit sogenannten [^1].
 
 Zuoberst in der Datei `index.php` fügts du folgendes ein:
 ```php
@@ -381,7 +379,7 @@ Füge in der Datei `index.php` zwischen die `article`-Tags folgendes Snippet ein
 Diese Codezeilen sind der sogenannte Loop. 
 Dieser macht, dass auf der Seite die richtigen Inhalte angezeit werden.
 
-Die zwei Tags `the_title()` und `the_content()` sind sogenannte [Template-Tags](https://codex.wordpress.org/Template_Tags). 
+Die zwei Tags `the_title()` und `the_content()` sind sogenannte Template Tags [^2]. 
 Solche Template-Tags gibt es sehr viele. 
 So können beispielsweise auch der/die Autor:in, das Veröffentlichungsdatum des Beitrags, etc. ausgegeben werden.
 
@@ -447,3 +445,6 @@ Du hast dein erstes eigenes Theme geschrieben.
 Hoffentlich hattest du Spass und bist ready, in der Blockwoche noch viel mehr über Wordpress und eigene Themes zu lernen. 
 
 Bis dahin eine gute Zeit 🥂
+
+[^1]: [Mehr zu Template-Include-Tags](https://codex.wordpress.org/Include_Tags)
+[^2]: [Mehr zu Template-Tags](https://codex.wordpress.org/Template_Tags)
