@@ -5,6 +5,12 @@
 Damit du wirklich von diesem Tutorial profitierst, solltest du dir mindestens zwei Stunden Zeit dafür nehmen und aktiv mitprogrammieren. 
 Du kannst das Tutorial unten in Textform durcharbeiten oder als Video, welcher hier zu finden ist.
 
+> **⚡⚠️ Wichtig ⚡⚠️** 
+> 
+> Das Videotutorial stammt aus dem letzten Jahr und es wurde dort noch mit Atom und nicht mit VS Code gearbeitet. 
+> In Kürze erscheint hier ein Video, wo das Setup mit VS Code erklärt wird. 
+> Das Text-Tutorial wurde schon angepasst auf VS Code.
+
 [![Video](https://i3.ytimg.com/vi/RokIlXTFGiU/maxresdefault.jpg)](https://www.youtube.com/watch?v=RokIlXTFGiU)
 
 Viel Spass 🎉
@@ -16,7 +22,7 @@ Die Zutaten, die wir brauchen, sind folgende:
 
 | Was                          | Link                                                              |
 |------------------------------|-------------------------------------------------------------------|
-| Den Code-Editor Atom         | [atom.io](https://atom.io)                                        |
+| Den Code-Editor VS Code      | [code.visualstudio.com](https://code.visualstudio.com/)           |
 | Webserver der FHGR           | [my.fh-htwchur.ch](https://my.fh-htwchur.ch/index.php?id=ftpstud) |
 | WordPress-Installationsdatei | [de.wordpress.org](https://de.wordpress.org/download/)            |
 
@@ -36,7 +42,7 @@ Nimm deshalb folgende Schritte vor:
 
 1. Erstelle lokal auf deinem Gerät einen Ordner `neunschrittetheme` 
 2. Erstelle auch auf dem Server unter `web/wp-content/themes/` eine Ordner mit dem Namen `neunschrittetheme`
-3. Öffne den lokal gespeicherten Ordner im Atom und erstelle zwei Dateien: `index.php` und `style.css`
+3. Öffne den lokal gespeicherten Ordner im VS Code und erstelle zwei Dateien: `index.php` und `style.css`
 
 Um ein funktionierendes Wordpress-Theme zu erstellen, werden mindestens diese zwei Dateien vorausgesetzt.  
 Kopiere in die Datei `index.php` folgenden Code rein. Der gibt die HTML-Grundstrukturen des Themes vor.
@@ -81,7 +87,7 @@ In der Datei CSS gibst du folgende Definitionen an:
 Theme Name: Neun Schritte Theme
 Author: Lea Moser
 Author URI: https://www.lea-moser.ch/
-Description: FS22 Vorbereitung Wordpress Kurs Mai 2022
+Description: Vorbereitung Wordpress Kurs
 Version: 1.0
 */
 ```
@@ -93,19 +99,28 @@ Auf deiner WordPress-Seite hat sich nun natürlich noch nichts geändert.
 Dafür musst du zuerst dein eigenes, soeben erstelltes, Theme hochladen und aktivieren.
 
 ### ⬆️ 04.1 - Hochladen
-Für's wird das Package Remote FTP genutzt. 
-Klicke im Atom folgendes: `packages/Remote FTP/Create FTP config file`. 
-In diesem File berarbeitest du nun folgende vier Zeilen:
+Für's hochladen wird im VS Code die Extension SFTP vom Autor *Natizyskunk* benutzt. 
+Um das zu installieren, muss in der Leiste links auf Extensions geklickt werden und dort kann dann nach SFTP gesucht und ddie korrekte Erweiterung installiert werden.
+
+Nun muss man `View/Command Palette...` anwählen und kann dort als Suchbegriff "SFTP" eingeben. Es muss dann der Befehl `SFTP: Config` angewählt werden. 
+Wenn man diesen Befehl geklikt hat, wird eine Datei mit dem Namen `sftp.json` im Ordner `.vscode` erstellt.  
+
+Erstetze dedn gesamten Inhalt des Files durch diese Zeilen:
 ```json
 {
+  "name": "Server FHGR Neunschrittetheme",
   "host": "web1.fh-htwchur.ch",
-  "user": "dein_username",
-  "pass": "dein_password",
-  "remote": "/web/wp-content/themes/neunschrittetheme/"
+  "protocol": "ftp",
+  "port": 21,
+  "secure": true,
+  "username": "deinusername",
+  "remotePath": "/web/wp-content/themes/neunschrittetheme/",
+  "password": "deinpasswort",
+  "uploadOnSave": true
 }
 ```
-Wähle anschliessend `packages/Remote FTP/toggle`, klicke dann auf den neuen Remote-Tab und wähle `Connect`.
-Wenn das klappt, kannst du anschliessend auf `Project` klicken, alle Dateien anwählen und mit Rechtsklick `Sync local -> remote` auf den Server laden.
+Fülle anschliessend noch dein Passwort und deinen Nutzernamen ein. Nun sollte immer wenn gespeichert wird, alles auf den Server geladen werden.
+
 
 ### ▶️ 04.2 - Aktivieren
 Wenn das hochladen klappt, muss das Theme aktiviert werden. 
