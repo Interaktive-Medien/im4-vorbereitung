@@ -105,7 +105,7 @@ Um das zu installieren, muss in der Leiste links auf Extensions geklickt werden 
 Nun muss man `View/Command Palette...` anwählen und kann dort als Suchbegriff "SFTP" eingeben. Es muss dann der Befehl `SFTP: Config` angewählt werden. 
 Wenn man diesen Befehl geklikt hat, wird eine Datei mit dem Namen `sftp.json` im Ordner `.vscode` erstellt.  
 
-Erstetze dedn gesamten Inhalt des Files durch diese Zeilen:
+Erstetze den gesamten Inhalt des Files durch diese Zeilen:
 ```json
 {
   "name": "Server FHGR Neunschrittetheme",
