@@ -9,7 +9,8 @@ Du kannst das Tutorial unten in Textform durcharbeiten oder als Video, welcher h
 > 
 > Das Videotutorial stammt aus dem letzten Jahr und es wurde dort noch mit Atom und nicht mit VS Code gearbeitet. 
 > In Kürze erscheint hier ein Video, wo das Setup mit VS Code erklärt wird. 
-> Das Text-Tutorial wurde schon angepasst auf VS Code.
+> Das Text-Tutorial wurde schon angepasst auf VS Code. Plus gehts hier zur [Anleitung](https://drive.google.com/file/d/1WE6Hl1LvOE7jMI_9u3W5FGM2x46h9ZO6/view?usp=share_link) für das SFTP-Plugin mit VS Code. 
+
 
 [![Video](https://i3.ytimg.com/vi/RokIlXTFGiU/maxresdefault.jpg)](https://www.youtube.com/watch?v=RokIlXTFGiU)
 
@@ -119,7 +120,14 @@ Erstetze den gesamten Inhalt des Files durch diese Zeilen:
   "uploadOnSave": true
 }
 ```
-Fülle anschliessend noch dein Passwort und deinen Nutzernamen ein. Nun sollte immer wenn gespeichert wird, alles auf den Server geladen werden.
+Fülle anschliessend noch dein Passwort und deinen Nutzernamen ein. 
+
+Geh dann wieder in zu `View/Command Palette...` uns suche den Befehl `SFTP: Sync Local -> Remote`. Wenn du diesen Befehl ausführst,
+wird dir der gesamte Code auf deinen Webserver geladen. Plus sollte dannach immer wenn gespeichert wird, alles auf den Server geladen werden.
+
+Falls etwas mit dem SFTP-Upload nicht funktioniert, schau dir doch nochmals diese Anleitung dazu an:
+
+[`⬇️ Anleistung SFTP VS-Code ⬇️`](https://drive.google.com/file/d/1WE6Hl1LvOE7jMI_9u3W5FGM2x46h9ZO6/view?usp=share_link)
 
 
 ### ▶️ 04.2 - Aktivieren
