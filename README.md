@@ -112,7 +112,7 @@ Erstetze den gesamten Inhalt des Files durch diese Zeilen:
   "host": "web1.fh-htwchur.ch",
   "protocol": "ftp",
   "port": 21,
-  "secure": true,
+  "secure": false,
   "username": "deinusername",
   "remotePath": "/web/wp-content/themes/neunschrittetheme/",
   "password": "deinpasswort",
