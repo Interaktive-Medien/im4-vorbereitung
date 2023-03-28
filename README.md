@@ -127,7 +127,7 @@ wird dir der gesamte Code auf deinen Webserver geladen. Plus sollte dannach imme
 
 Falls etwas mit dem SFTP-Upload nicht funktioniert, schau dir doch nochmals diese Anleitung dazu an:
 
-[`⬇️ Anleistung SFTP VS-Code ⬇️`](https://drive.google.com/file/d/1WE6Hl1LvOE7jMI_9u3W5FGM2x46h9ZO6/view?usp=share_link)
+[`⬇️ Anleitung SFTP VS-Code ⬇️`](https://drive.google.com/file/d/1WE6Hl1LvOE7jMI_9u3W5FGM2x46h9ZO6/view?usp=share_link)
 
 
 ### ▶️ 04.2 - Aktivieren
