@@ -7,11 +7,11 @@ Du kannst das Tutorial unten in Textform durcharbeiten oder als Video, welcher h
 
 > **⚡⚠️ Wichtig ⚡⚠️** 
 > 
-> Das Videotutorial stammt aus dem letzten Jahr und es wurde dort noch mit Atom und nicht mit VS Code gearbeitet. 
-> In Kürze erscheint hier ein Video, wo das Setup mit VS Code erklärt wird. 
+> Das Videotutorial stammt aus dem letzten Jahr und es wurde dort noch mit Atom und nicht mit VS Code gearbeitet. Der erste der zwei Videos unten, erklärt nochmals die Arbeit mit VS Code.
 > Das Text-Tutorial wurde schon angepasst auf VS Code. Plus gehts hier zur [Anleitung](https://drive.google.com/file/d/1WE6Hl1LvOE7jMI_9u3W5FGM2x46h9ZO6/view?usp=share_link) für das SFTP-Plugin mit VS Code. 
 
 
+[![Video](https://i3.ytimg.com/vi/zzS9WJcL49Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=zzS9WJcL49Y)
 [![Video](https://i3.ytimg.com/vi/RokIlXTFGiU/maxresdefault.jpg)](https://www.youtube.com/watch?v=RokIlXTFGiU)
 
 Viel Spass 🎉
