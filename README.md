@@ -7,7 +7,7 @@ Du kannst das Tutorial unten in Textform durcharbeiten oder als Video, welcher h
 
 > **⚡⚠️ Wichtig ⚡⚠️** 
 > 
-> Das Videotutorial stammt aus dem letzten Jahr und es wurde dort noch mit Atom und nicht mit VS Code gearbeitet. Der erste der zwei Videos unten, erklärt nochmals die Arbeit mit VS Code.
+> Das Videotutorial stammt aus dem letzten Jahr und es wurde dort noch mit Atom und nicht mit VS Code gearbeitet. Der erste der zwei Videos unten erklärt nochmals die Arbeit mit VS Code.
 > Das Text-Tutorial wurde schon angepasst auf VS Code. Plus gehts hier zur [Anleitung](https://drive.google.com/file/d/1WE6Hl1LvOE7jMI_9u3W5FGM2x46h9ZO6/view?usp=share_link) für das SFTP-Plugin mit VS Code. 
 
 
@@ -30,19 +30,19 @@ Die Zutaten, die wir brauchen, sind folgende:
 
 ## 💻 02 - Die Installation
 Setze zuerst eine neue Umgebung auf dem Schulserver auf. Wichtig: Es wird eine Datenbank benötigt. 
-Lade dann alle Dateien der entzippten Wordpress-Installationsdatei in's Verzeichnis `web` des Servers. 
+Lade dann alle Dateien der entzippten Wordpress-Installationsdatei ins Verzeichnis `web` des Servers. 
 Wichtig hier: Lade nicht den Ordner `wordpress` hoch, sondern alle sich darin befindenden Dateien. 
 
 Sobald alles hochgeladen ist, kannst du die Webseite öffnen und dem Installationsassistenten folgen.
 
 ## 🧥 03 - Das Theme
-Du hast im Moment das Standarttheme von WordPress auf deiner Webseite installiert. 
-Genau das wollen wir jetzt ändern, denn wir wollen im Anschluss ein eigenes, 100% individualisierbares Theme erstellen.
+Du hast im Moment das Standard-Theme von WordPress auf deiner Webseite installiert. 
+Genau das wollen wir jetzt ändern, denn wir wollen im Anschluss ein eigenes, 100 % individualisierbares Theme erstellen.
 
 Nimm deshalb folgende Schritte vor:
 
 1. Erstelle lokal auf deinem Gerät einen Ordner `neunschrittetheme` 
-2. Erstelle auch auf dem Server unter `web/wp-content/themes/` eine Ordner mit dem Namen `neunschrittetheme`
+2. Erstelle auch auf dem Server unter `web/wp-content/themes/` einen Ordner mit dem Namen `neunschrittetheme`
 3. Öffne den lokal gespeicherten Ordner im VS Code und erstelle zwei Dateien: `index.php` und `style.css`
 
 Um ein funktionierendes Wordpress-Theme zu erstellen, werden mindestens diese zwei Dateien vorausgesetzt.  
@@ -93,18 +93,18 @@ Version: 1.0
 */
 ```
 Alle Dinge die nach mir benannt sind, kannst und sollst du natürlich umbenennen 🙂
-Wenn du das gemacht hast, hast du eigentlisch schon ein erstes, eigenes Wordpress-Theme erstellt.
+Wenn du das gemacht hast, hast du eigentlich schon ein erstes, eigenes Wordpress-Theme erstellt.
 
 ## 👓 04 - Der erste Blick
 Auf deiner WordPress-Seite hat sich nun natürlich noch nichts geändert. 
 Dafür musst du zuerst dein eigenes, soeben erstelltes, Theme hochladen und aktivieren.
 
 ### ⬆️ 04.1 - Hochladen
-Für's hochladen wird im VS Code die Extension SFTP vom Autor *Natizyskunk* benutzt. 
-Um das zu installieren, muss in der Leiste links auf Extensions geklickt werden und dort kann dann nach SFTP gesucht und ddie korrekte Erweiterung installiert werden.
+Fürs Hochladen wird im VS Code die Extension SFTP vom Autor *Natizyskunk* benutzt. 
+Um das zu installieren, muss in der Leiste links auf Extensions geklickt werden und dort kann dann nach SFTP gesucht und die korrekte Erweiterung installiert werden.
 
 Nun muss man `View/Command Palette...` anwählen und kann dort als Suchbegriff "SFTP" eingeben. Es muss dann der Befehl `SFTP: Config` angewählt werden. 
-Wenn man diesen Befehl geklikt hat, wird eine Datei mit dem Namen `sftp.json` im Ordner `.vscode` erstellt.  
+Wenn man diesen Befehl geklickt hat, wird eine Datei mit dem Namen `sftp.json` im Ordner `.vscode` erstellt.  
 
 Erstetze den gesamten Inhalt des Files durch diese Zeilen:
 ```json
@@ -123,7 +123,7 @@ Erstetze den gesamten Inhalt des Files durch diese Zeilen:
 Fülle anschliessend noch dein Passwort und deinen Nutzernamen ein. 
 
 Geh dann wieder in zu `View/Command Palette...` uns suche den Befehl `SFTP: Sync Local -> Remote`. Wenn du diesen Befehl ausführst,
-wird dir der gesamte Code auf deinen Webserver geladen. Plus sollte dannach immer wenn gespeichert wird, alles auf den Server geladen werden.
+wird dir der gesamte Code auf deinen Webserver geladen. Plus sollte danach, immer wenn gespeichert wird, alles auf den Server geladen werden.
 
 Falls etwas mit dem SFTP-Upload nicht funktioniert, schau dir doch nochmals diese Anleitung dazu an:
 
@@ -131,11 +131,11 @@ Falls etwas mit dem SFTP-Upload nicht funktioniert, schau dir doch nochmals dies
 
 
 ### ▶️ 04.2 - Aktivieren
-Wenn das hochladen klappt, muss das Theme aktiviert werden. 
+Wenn das Hochladen klappt, muss das Theme aktiviert werden. 
 Das machst du im Backend unter dem Punkt `Appearance/Themes`. 
-Wenn du dort drauf gehst sollte nun auch dein eigenes Theme erscheinen. 
+Wenn du dort darauf gehst, sollte nun auch dein eigenes Theme erscheinen. 
 Unten sollte sich ein Button finden, mit dem du das Theme aktivieren kannst. 
-Wenn du die Seite auf dem Webserver neu lädst (ev. mit SHIFT und dem Refresh-Pfeil) erscheint nun die Webseite mit deinem eigenen Theme.
+Wenn du die Seite auf dem Webserver neu lädst (ev. mit SHIFT und dem Refresh-Pfeil) erscheint die Webseite mit deinem eigenen Theme.
 
 ## 👯‍♂️ 05 - Die Dynamik
 Bis jetzt kann unser Theme nichts. Also wirklich nichts 🙂 
@@ -154,7 +154,7 @@ Zwischen den p-Tag im Header, wo der Slogan hin soll, fügst du folgendes Snippe
 <?php bloginfo('description') ;?>
 ```
 Wenn du die Datei `index.php` abgespeichert hast, kannst du im Backend unter Einstellungen nun den Titel und den Untertitel ändern. 
-Dieser wird sich auf der Webseite nun automatisch anpassen.
+Dieser wird sich auf der Webseite automatisch anpassen.
 
 ### 🖌️ 05.2 - Stylesheet
 Die Datei `style.css` hast du ja ganz zu Beginn schon erstellt. 
@@ -164,9 +164,9 @@ die Webseite ist noch ungestylt. Mit folgendem Tag im `head` von `index.php` kan
 <link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_url') ;?>">
 ```
 Füge in die Datei `style.css` nun folgende Zeilen ein. 
-Wenn du dann dein eigenes Theme schreibst musst du diese Datei natürlich selbst schreiben, 
-aber damit du dich hier nur auf die Funtkionalitäten von WordPress konzentrieren kannst, 
-wird dir hier dass CSS zur Verfügung gestellt.
+Wenn du dann dein eigenes Theme schreibst, musst du diese Datei natürlich selbst schreiben, 
+aber damit du dich hier nur auf die Funktionalitäten von WordPress konzentrieren kannst, 
+wird dir hier das CSS zur Verfügung gestellt.
 <details>
 <summary><strong>👉 Kopiervorlage CSS 👈</strong></summary>
 
@@ -294,10 +294,10 @@ Das machen wir, indem wir anstatt nur dem `h1`-Tag folgendes einfügen:
 ```
 Dein Seitentitel verweis jetzt immer auf die Startseite.
 
-### 📢 05.4 - Unterstützdende Tags
+### 📢 05.4 - Unterstützende Tags
 Die nachfolgenden Angaben sind extrem wichtig! 
-Sie verändern auf den ersten Blick nicht viel, sind aber für die Funktionalität von Wordpress essentiell! 
-Das Einzige, was du nach diesen Schirtten auf den ersten Blick als Veränderung erkennen wirst, ist die Bearbeitungsleiste, die dir angezeigt wird.
+Sie verändern auf den ersten Blick nicht viel, sind aber für die Funktionalität von Wordpress essenziell! 
+Das Einzige, was du nach diesen Schritten auf den ersten Blick als Veränderung erkennen wirst, ist die Bearbeitungsleiste, die dir angezeigt wird.
 
 Ändere den `body`-Tag so ab:
 ```php
@@ -325,11 +325,11 @@ Dann speicherst du alle Dateien mal ab.
 In einem Nächsten Schritt musst du die Teile, die du entfernt hast, wieder einfügen. 
 Das geschieht mit sogenannten Template Include Tags [^1].
 
-Zuoberst in der Datei `index.php` fügts du folgendes ein:
+Zuoberst in der Datei `index.php` fügst du Folgendes ein:
 ```php
 <?php get_header(); ?>
 ```
-Und zuuntest das:
+Und zuunterst das:
 ```php
 <?php get_footer(); ?>
 ```
@@ -345,7 +345,7 @@ Dafür müssen zwei Dinge getan werden:
 
 Doch beginnen wir zuoberst. Zu Beginn muss eine neue Datei erstellt werden die `functions.php` heisst. 
 Diese würde, wenn das Theme anschliessend an diese neun Schritte weiter optimiert würde, sehr häufig gebraucht werden. 
-In diese Datei fügst du nun dieses Schnipsel ein:
+In diese Datei fügst du nun diesen Schnipsel ein:
 ```php
 <?php
     add_action('after_setup_theme', 'navigation_registrieren');
@@ -354,7 +354,7 @@ In diese Datei fügst du nun dieses Schnipsel ein:
     };
 ?>
 ```
-Einige Begriffe aus der Funktion, die du nun eingefügst hast, werden hier kurz erklärt:
+Einige Begriffe aus der Funktion, die du nun eingefügt hast, werden hier kurz erklärt:
 
 | Befehl              | Definition                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -365,7 +365,7 @@ Einige Begriffe aus der Funktion, die du nun eingefügst hast, werden hier kurz 
 | `Navigation oben`   | So wird deine Navigation im Backend benannt.                                                                                                                 |
 
 Wenn du nun alles speicherst und das Backend neu lädst, sollte unter dem Punkt Design der Punkt „Menus“ erscheinen. 
-Dort kannst du deine Navigation nun erfassen. 
+Dort kannst du deine Navigation jetzt erfassen. 
 Füge dazu einfach mal die Startseite ins Menu ein.
 
 Wenn du das Frontend nachher aktualisierst, wirst du noch nichts sehen. 
@@ -374,7 +374,7 @@ Das machen wir jetzt, und zwar in dem wir das folgende Snippet in `index.php` zw
 ```php
 <?php wp_nav_menu(array('theme_location' => 'hauptnavigation')) ;?>
 ```
-Du siehst, dass wir nun den Namen den wir der Navigation gegeben haben, hier auch angeben mussten. 
+Du siehst, dass wir nun den Namen, den wir der Navigation gegeben haben, hier auch angeben mussten. 
 So wird die registrierte Navigation diesem Ort zugewiesen. 
 Nach einem Refresh sollte dir jetzt die Startseite als Navigationspunkt angezeigt werden.
 
@@ -387,7 +387,7 @@ Bevor wir mit dem achten Schritt beginnen, musst du Testinhalte erstellen.
 - `post` ➡️ Hallo another Welt!
 
 Fülle diese Posts mit Dummycontent und füge die Seiten `Impressum` und `About Us` in die Navigation ein.
-Wenn jetzt auf einen dieser Menupunkte geklickt wird, wechselt sich zwar die URL,
+Wenn jetzt auf einen dieser Menu-Punkte geklickt wird, wechselt sich zwar die URL,
 aber der von dir eingefüllte Inhalt wird nicht angezeigt. Das ändern wir jetzt. 
 
 Füge in der Datei `index.php` zwischen die `article`-Tags folgendes Snippet ein:
@@ -400,7 +400,7 @@ Füge in der Datei `index.php` zwischen die `article`-Tags folgendes Snippet ein
 <?php endif; ?>
 ```
 Diese Codezeilen sind der sogenannte Loop. 
-Dieser macht, dass auf der Seite die richtigen Inhalte angezeit werden.
+Dieser macht, dass auf der Seite die richtigen Inhalte angezeigt werden.
 
 Die zwei Tags `the_title()` und `the_content()` sind sogenannte Template Tags [^2]. 
 Solche Template-Tags gibt es sehr viele. 
@@ -442,7 +442,7 @@ um welche Datei es sich handelt. So etwa:
 Für `page.php` und `single.php` schreibst du natürlich die entsprechenden Namen zwischen die `mark`-Klammern.
 
 Wenn du anschliessend alles abspeicherst und dich durch die Seiten und Beiträge klickst, 
-siehst du dass für unteschiedliche Sachen unterschiedliche Templates verwedent werden. 
+siehst du, dass für unterschiedliche Sachen unterschiedliche Templates verwendet werden. 
 Das können wir uns jetzt zu Nutzen machen! 🙂
 
 Wir nehmen nu folgende Änderungen vor: 
